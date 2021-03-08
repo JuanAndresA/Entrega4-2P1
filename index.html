@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Actividad 2</title>
+  <link rel="stylesheet" type="text/css" href="est.css">
+</head>
+<body>
+
+
+<div class="c">
+	<form class="f1">
+<p class="tt">ACTIVIDAD 2</p>  
+<label>Numero que quiere ingresar:</label><br>
+<input type="text" placeholder="numero" id="n1">
+<input type="button" value="INGRESAR" id="b1" onclick="ingre();">  
+</form>
+
+<form class="f2">
+<label>El maximo valor es :</label><br>
+<input type="text" placeholder="Numero maximo" id="n2">
+<input type="button" value="MOSTRAR" id="b2" onclick="mostrar();">  
+</form>
+</div>
+
+<script type="text/javascript">
+	
+        vec=[];
+
+var ingre=function() {
+            
+
+            var nv= document.getElementById("n1").value;
+            vec.push(nv);
+            n1.value="";
+            console.log(vec);
+            if (vec.length==5) {
+              
+              alert("Ya no puedes ingresar más datos");
+               b1.remove(b1);
+
+            }
+
+
+       }
+
+
+var mostrar=function () {
+
+     max=0;
+     a=0;
+    
+
+     while(a<=vec.length)
+     {
+       if (vec[a]>max) {
+           
+          max=vec[a];
+          console.log(max);
+          n2.value=max;
+          
+          
+
+
+       }
+       else
+       {
+        a=a+1;
+       
+       }
+     }
+}
+
+</script>
+
+
+
+</body>
+</html>
